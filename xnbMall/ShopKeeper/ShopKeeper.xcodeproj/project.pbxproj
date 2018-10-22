@@ -329,6 +329,7 @@
 		B2E90B811DD718F3005783A8 /* MABrandBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E90B801DD718F3005783A8 /* MABrandBoard.m */; };
 		B2E90B841DD71BFC005783A8 /* MABrandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E90B831DD71BFC005783A8 /* MABrandCell.m */; };
 		B2F18F771DD40861000C14B9 /* MABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F18F761DD40861000C14B9 /* MABaseViewController.m */; };
+		F9477173C342BFC385FA6049 /* libPods-ShopKeeper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B591EEE6600A4F73E91A0FDF /* libPods-ShopKeeper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1046,6 +1047,7 @@
 		B2E90B831DD71BFC005783A8 /* MABrandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABrandCell.m; sourceTree = "<group>"; };
 		B2F18F751DD40861000C14B9 /* MABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseViewController.h; sourceTree = "<group>"; };
 		B2F18F761DD40861000C14B9 /* MABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseViewController.m; sourceTree = "<group>"; };
+		B591EEE6600A4F73E91A0FDF /* libPods-ShopKeeper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShopKeeper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D4781D08C9881019BEB4B0 /* Pods-ShopKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopKeeper.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ShopKeeper/Pods-ShopKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		E8A3D344545A47442CD551CA /* Pods-ShopMall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopMall.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ShopMall/Pods-ShopMall.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1093,6 +1095,7 @@
 				6A5FC8351CF70D380056D337 /* UIKit.framework in Frameworks */,
 				6A5FC8211CF70C4A0056D337 /* AlipaySDK.framework in Frameworks */,
 				AEA336C51EBC0DB10010A50D /* WechatPay.framework in Frameworks */,
+				F9477173C342BFC385FA6049 /* libPods-ShopKeeper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1156,6 +1159,7 @@
 				6A5FC8391CF70D630056D337 /* Foundation.framework */,
 				6A5FC8361CF70D460056D337 /* CFNetwork.framework */,
 				6A5FC8341CF70D380056D337 /* UIKit.framework */,
+				B591EEE6600A4F73E91A0FDF /* libPods-ShopKeeper.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2784,7 +2788,6 @@
 				6A2B1BF41CF6B33200DC0139 /* Sources */,
 				6A2B1BF51CF6B33200DC0139 /* Frameworks */,
 				6A2B1BF61CF6B33200DC0139 /* Resources */,
-				52A778D80152F969BBC51E88 /* [CP] Embed Pods Frameworks */,
 				E87FBC68DD36C94F868FCCA1 /* [CP] Copy Pods Resources */,
 				623CFB683B87C2EB0757FA58 /* 📦 Embed Pods Frameworks */,
 				8D7692AA941791C4BA569983 /* 📦 Copy Pods Resources */,
@@ -2943,34 +2946,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		52A778D80152F969BBC51E88 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ShopKeeper/Pods-ShopKeeper-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5F011722A45941BAB1048F31 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShopKeeper-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		623CFB683B87C2EB0757FA58 /* 📦 Embed Pods Frameworks */ = {
@@ -3009,9 +3000,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-ShopKeeper/Pods-ShopKeeper-resources.sh",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/MWPhotoBrowser/MWPhotoBrowser/MWPhotoBrowser.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

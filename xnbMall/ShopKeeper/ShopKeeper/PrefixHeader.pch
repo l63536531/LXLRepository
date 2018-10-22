@@ -1,0 +1,116 @@
+//
+//  PrefixHeader.pch
+//  ShopKeeper
+//
+//  Created by zzheron on 16/5/26.
+//  Copyright © 2016年 zzheron. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "SKMACROs.h"
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+#import <MJRefresh.h>
+#import <MBProgressHUD.h>
+#import <UIImageView+WebCache.h>
+#import <SVProgressHUD.h>
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <MJExtension.h>
+#import <YYCache.h>
+#import <YYModel.h>
+#import "MyUtile.h"
+#import "HttpReq.h"
+#import "Utils.h"
+#import "IWHTTPSessionManager.h"
+#import "UIAlertView+Additions.h"
+#import "SKConst.h"
+#import "NSString+wrapper.h"
+#import "MBProgressHUD+PKX.h"
+#import "NetWorkManager.h"
+#import "AllModel.h"
+#import "UIColor+_6DataColor.h"
+
+
+//定义4个环境
+#define ENV_AL 1  //alpha环境
+#define ENV_BT 2   //beat环境
+#define ENV_TS 3   //test环境
+#define ENV_OL 4   //online环境
+#define ENV_leilei 5
+
+#define ENV ENV_OL  //选择环境
+
+#define Print_LOG 0
+
+#if Print_LOG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+#if (ENV== ENV_AL)//alpha环境
+#define SERVER_ADDR @"http://alpham.51xnb.cn/mall"
+#define SERVER_ADDR_XNBMALL @"http://alpham.51xnb.cn/mall"
+
+#elif (ENV== ENV_BT)//beat环境
+#define SERVER_ADDR @"http://betam.51xnb.cn/mall"
+#define SERVER_ADDR_XNBMALL @"http://betam.51xnb.cn/mall"
+
+#elif(ENV== ENV_TS)//test环境
+#define SERVER_ADDR @"http://testm.51xnb.cn/mall"
+#define SERVER_ADDR_XNBMALL @"http://testm.51xnb.cn/mall"
+
+#elif(ENV== ENV_OL)//online环境
+#define SERVER_ADDR @"http://m.51xnb.cn/mall"
+#define SERVER_ADDR_XNBMALL @"http://m.51xnb.cn/mall"
+
+#elif(ENV== ENV_leilei)//leilei环境
+#define SERVER_ADDR @"http://192.168.1.104:8080/cqgkwaiter"
+#define SERVER_ADDR_XNBMALL @"http://192.168.1.104:8080/cqgkwaiter"
+#endif
+
+#define VIEW_INTER 10
+#define FRAME_WIDTH self.view.frame.size.width
+#define FRAME_HEIGHT self.view.frame.size.height
+
+
+
+#define IOS7_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] floatValue] >=7.0 )
+#define IOS8_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] floatValue] >=8.0 )
+#define IOS9_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] floatValue] >=9.0 )
+#define IOS10_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] floatValue] >=10.0 )
+
+
+#define IPHONE5   ( [[UIScreen mainScreen]bounds].size.height == 568 )
+#define IPHONE4   ( [[UIScreen mainScreen]bounds].size.height == 480 )
+#define IPHONE6   ( [[UIScreen mainScreen]bounds].size.height == 667 )
+#define IPHONE6_PLUS   ( [[UIScreen mainScreen]bounds].size.height == 736 )
+
+#define STATUSBAR_HEIGHT 20
+#define NAVIGATIONBAR_HEIGHT 44
+#define TABBAR_HEIGHT 49
+#define TOOLBAR_HEIGHT 49
+#define COMMON_VIEW_ALPHA 0.8
+
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+//比例系数
+#define kKuanXiShu [UIScreen mainScreen].bounds.size.width/375
+#define KFontSize(size) [UIFont systemFontOfSize:size]
+#define KFontColor(colorStr)  [UIColor colorWithHexString:colorStr]
+#define KBackColor(colorStr)  [UIColor colorWithHexString:colorStr]
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+//中文字体
+#define CHINESE_FONT_NAME  @"Heiti SC"
+#define CHINESE_SYSTEM(x) [UIFont fontWithName:CHINESE_FONT_NAME size:x]
+
+static const NSInteger TOP_HEIGHT = STATUSBAR_HEIGHT + NAVIGATIONBAR_HEIGHT;
+
+#endif /* PrefixHeader_pch */

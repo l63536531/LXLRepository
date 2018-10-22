@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "d49b3384-211e-2148-8e55-452b58705102++2568",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "d49b3384-211e-2148-8e55-452b58705102++2568" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "d49b3384-211e-2148-8e55-452b58705102++2568" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "933893C0-183E-4094-895D-C79A6558A1C5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "d49b3384-211e-2148-8e55-452b58705102++2568" : "XNBmall\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ShopKeeper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "xnbMall\/ShopKeeper\/ShopKeeper.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.1.251\/svn\/xnbmallios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d49b3384-211e-2148-8e55-452b58705102++2568"
+    }
+  ]
+}

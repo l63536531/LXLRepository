@@ -81,6 +81,31 @@ DEPENDENCIES:
   - YYCache
   - YYModel
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
+    - AFNetworking
+    - BlocksKit
+    - DACircularProgress
+    - DateTools
+    - FMDB
+    - JSONModel
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - MWPhotoBrowser
+    - PSTCollectionView
+    - Reachability
+    - SDCycleScrollView
+    - SDWebImage
+    - SRMModalViewController
+    - SVProgressHUD
+    - TYAlertController
+    - YCXMenu
+    - YYCache
+    - YYModel
+
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -107,4 +132,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 435bf7eec184dee971e0fd0984996d6ba972df27
 
-COCOAPODS: 1.1.0.beta.2
+COCOAPODS: 1.5.3

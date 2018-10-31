@@ -1,6 +1,0 @@
-framework module UnionPay {
-  umbrella header "UnionPay.h"
-
-  export *
-  module * { export * }
-}
